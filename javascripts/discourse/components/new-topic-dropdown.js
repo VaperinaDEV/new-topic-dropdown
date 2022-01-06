@@ -40,7 +40,6 @@ export default DropdownSelectBoxComponent.extend({
   @action
   onChange(selectedAction) {
     const composerController = getOwner(this).lookup("controller:composer");
-    const composerModal = require("discourse/models/composer").default;
 
     let tags = null;
     let categoryId = this.category ? this.category.id : null;
@@ -55,7 +54,7 @@ export default DropdownSelectBoxComponent.extend({
 
     composerController.open({
       action: Composer.CREATE_TOPIC,
-      draftKey: composerModal.draft_key || composerModal.NEW_TOPIC_KEY,
+      draftKey: Composer.draft_key || Composer.NEW_TOPIC_KEY,
       categoryId: categoryId,
       tags: tags,
     });
