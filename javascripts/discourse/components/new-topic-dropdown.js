@@ -17,14 +17,6 @@ export default DropdownSelectBoxComponent.extend({
   },
 
   content: computed(function () {
-    const items = [
-      {
-        id: "new_discussion",
-        name: "Új téma",
-        description: "Kezdj egy új beszélgetést...",
-        icon: "comment",
-      },
-    ];
 
     items.push({
       id: "new_question",
