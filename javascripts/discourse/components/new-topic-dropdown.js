@@ -55,6 +55,8 @@ export default DropdownSelectBoxComponent.extend({
     composerController.open({
       action: Composer.CREATE_TOPIC,
       draftKey: Composer.DRAFT,
+      draft: data.draft,
+      draftSequence: data.draft_sequence,
       categoryId: categoryId,
       tags: tags,
     });
