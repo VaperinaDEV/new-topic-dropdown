@@ -40,7 +40,7 @@ export default DropdownSelectBoxComponent.extend({
   @action
   onChange(selectedAction) {
     const composerController = getOwner(this).lookup("controller:composer");
-    const composerModal = require("discourse/models/composer").default,
+    const composerModal = require("discourse/models/composer").default;
 
     let tags = null;
     let categoryId = this.category ? this.category.id : null;
