@@ -21,15 +21,15 @@ export default DropdownSelectBoxComponent.extend({
      const items = [
       {
         id: "new_question",
-        name: "Kérdés",
-        description: "Hirdess gyorsan, egyszerűen...",
+        name: "Kérdésed van?",
+        description: "Ne habozz, itt mindenki szívesen segít...",
         icon: "question-circle",
       },
     ];
 
     items.push({
       id: "new_ad",
-      name: "Hirdetésfeladás",
+      name: "Eladnál? Esetleg vennél?",
       description: "Hirdess gyorsan, egyszerűen...",
       icon: "tag",
     });
@@ -45,11 +45,11 @@ export default DropdownSelectBoxComponent.extend({
     let categoryId = this.category ? this.category.id : null;
 
     if (selectedAction === "new_question") {
-      categoryId = "2";
+      categoryId = "49";
     }
 
     if (selectedAction === "new_ad") {
-      categoryId = "Junk";
+      categoryId = "31";
     }
 
     composerController.open({
