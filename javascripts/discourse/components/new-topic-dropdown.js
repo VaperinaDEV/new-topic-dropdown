@@ -31,7 +31,7 @@ export default DropdownSelectBoxComponent.extend({
       id: "new_ad",
       name: "Eladnál? Esetleg vennél?",
       description: "Hirdess gyorsan, egyszerűen...",
-      icon: "tag",
+      icon: "tags",
     });
 
     return items;
@@ -42,7 +42,7 @@ export default DropdownSelectBoxComponent.extend({
     const composerController = getOwner(this).lookup("controller:composer");
 
     let tags = null;
-    let categoryId = this.category ? this.category.id : this.category;
+    let categoryId = this.category ? this.category.id : null;
 
     if (selectedAction === "new_question") {
       categoryId = "49";
