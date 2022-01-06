@@ -42,7 +42,7 @@ export default DropdownSelectBoxComponent.extend({
     const composerController = getOwner(this).lookup("controller:composer");
 
     let tags = null;
-    let categoryId = null;
+    let categoryId = this.category ? this.category.id : null;
 
     if (selectedAction === "new_question") {
       categoryId = "49";
