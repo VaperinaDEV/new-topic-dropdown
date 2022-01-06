@@ -11,6 +11,9 @@
     background: var(--primary-low);
     border-radius: 0 1em 1em 0;
     border: 2px solid var(--tertiary);
+    .d-icon {
+      color: var(--primary-high);
+    }
   }
   &.is-expanded .select-kit-header {
     box-shadow: none !important;
