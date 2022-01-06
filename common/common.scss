@@ -1,4 +1,6 @@
 .select-kit.new-topic-dropdown .btn {
-  border-radius: 0 1em 1em 0;
+  width: 3.5em;
   height: 3em;
+  border-radius: 0 1em 1em 0;
+  border: 2px solid var(--tertiary);
 }
