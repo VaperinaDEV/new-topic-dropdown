@@ -12,7 +12,7 @@ export default DropdownSelectBoxComponent.extend({
     showFullTitle: false,
     autoFilterable: false,
     filterable: false,
-    showCaret: false,
+    showCaret: true,
     none: "topic.create",
   },
 
