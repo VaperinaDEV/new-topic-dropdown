@@ -17,13 +17,15 @@ export default DropdownSelectBoxComponent.extend({
   },
 
   content: computed(function () {
-
-    items.push({
-      id: "new_question",
-      name: "Kérdés",
-      description: "Hirdess gyorsan, egyszerűen...",
-      icon: "question-circle",
-    });
+    
+     const items = [
+      {
+        id: "new_question",
+        name: "Kérdés",
+        description: "Hirdess gyorsan, egyszerűen...",
+        icon: "question-circle",
+      },
+    ];
 
     items.push({
       id: "new_ad",
