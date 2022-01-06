@@ -8,11 +8,10 @@
   &.new-topic-dropdown .btn {
     width: 3.5em;
     height: 3em;
-    background: var(--primary-low);
     border-radius: 0 1em 1em 0;
     border: 2px solid var(--tertiary);
   }
   &.is-expanded .select-kit-header {
-    box-shadow: none;
+    box-shadow: none !important;
   }
 }
