@@ -43,6 +43,10 @@ export default DropdownSelectBoxComponent.extend({
 
     let tags = null;
     let categoryId = this.category ? this.category.id : null;
+      
+    topicCategory = container
+      .lookup("route:topic")
+      .get("context.category.id"),
 
     if (selectedAction === "new_question") {
       categoryId = "49";
