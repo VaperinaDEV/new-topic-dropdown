@@ -9,7 +9,7 @@ export default DropdownSelectBoxComponent.extend({
 
   selectKitOptions: {
     icons: ["plus"],
-    showFullTitle: true,
+    showFullTitle: false,
     autoFilterable: false,
     filterable: false,
     showCaret: true,
