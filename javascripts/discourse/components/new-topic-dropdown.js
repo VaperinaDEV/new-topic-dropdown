@@ -39,7 +39,7 @@ export default DropdownSelectBoxComponent.extend({
 
   @action
   onChange(selectedAction) {
-    const composerController = container.lookup("controller:navigation/category");
+    const composerController = getOwner(this).lookup("controller:composer");
 
     let tags = null;
     let categoryId = this.category ? this.category.id : null;
