@@ -44,10 +44,6 @@ export default DropdownSelectBoxComponent.extend({
     let tags = null;
     let categoryId = this.category ? this.category.id : null;
     
-    if (selectedAction === "new_question") {
-      categoryId = "16";
-      tags = "todo"
-    }
 
     if (selectedAction === "new_ad") {
       categoryId = "31";
