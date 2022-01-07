@@ -41,14 +41,16 @@ export default DropdownSelectBoxComponent.extend({
   onChange(selectedAction) {
     const composerController = getOwner(this).lookup("controller:composer");
   
+    let categoryd = null;
+  
     if (selectedAction === "new_question") {
-      let categoryId = 16;
+      categoryd = "16";
+    }
 
     composerController.open({
       action: Composer.CREATE_TOPIC,
       draftKey: Composer.NEW_TOPIC_KEY,
-      categoryId: categoryId,
+      categoryId: categoryd,
     });
-    },
   },
 });
