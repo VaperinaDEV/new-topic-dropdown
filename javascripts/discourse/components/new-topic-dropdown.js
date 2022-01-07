@@ -42,21 +42,21 @@ export default DropdownSelectBoxComponent.extend({
     const composerController = getOwner(this).lookup("controller:composer");
   
     let tags = null;
-    let categoryId = this.category ? this.category.id : null;
+    let categoryd = this.category ? this.category.id : null;
     
     if (selectedAction === "new_question") {
-      categoryId = "16";
+      categoryd = "16";
       tags = "todo"
     }
 
     if (selectedAction === "new_ad") {
-      categoryId = "31";
+      categoryd = "31";
     }
 
     composerController.open({
       action: Composer.CREATE_TOPIC,
       draftKey: Composer.NEW_TOPIC_KEY,
-      categoryId: categoryId,
+      categoryId: categoryd,
       tags: tags,
     });
   },
