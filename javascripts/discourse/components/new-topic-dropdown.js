@@ -30,7 +30,7 @@ export default DropdownSelectBoxComponent.extend({
     if (hideForNewUser) {
       items.push({
         id: "new_ad",
-        name: "Eladnál? Esetleg vennél?",
+        name: "Hirdetésfeladás",
         description: "Hirdess gyorsan, egyszerűen...",
         icon: "tags",
       });
