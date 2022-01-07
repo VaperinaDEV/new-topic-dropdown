@@ -59,5 +59,5 @@ api.modifyClass("model:composer", {
       tags: tags,
     });
   },
+},
 });
-};
