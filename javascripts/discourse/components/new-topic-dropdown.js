@@ -17,11 +17,8 @@ export default DropdownSelectBoxComponent.extend({
   },
 
   content: computed(function () {
-    const hideForNewUser =
-        settings.hide_from_new_users &&
-        this.currentUser &&
-        this.currentUser.trust_level === 0;
-    const hideForAnon = settings.hide_from_anons && !this.currentUser;
+    const hideForNewUser = this.currentUser && this.currentUser.trust_level === 0;
+    const hideForAnon = !this.currentUser;
     
     const items = [
       {
