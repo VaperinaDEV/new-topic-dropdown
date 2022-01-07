@@ -42,7 +42,7 @@ export default DropdownSelectBoxComponent.extend({
     const composerController = getOwner(this).lookup("controller:composer");
   
     let tags = null;
-    let categoryId = this.category ? this.category.id : null;
+    let categoryId = this.category ? this.category.id : this.category;
     
     if (selectedAction === "new_question") {
       categoryId = "49";
@@ -56,7 +56,7 @@ export default DropdownSelectBoxComponent.extend({
       action: Composer.CREATE_TOPIC,
       draftKey: Composer.draft_key || Composer.NEW_TOPIC_KEY,
       categoryId: categoryId,
-      tags: tags
+      tags: tags,
     });
   },
 });
