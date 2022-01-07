@@ -17,8 +17,13 @@ export default DropdownSelectBoxComponent.extend({
   },
 
   content: computed(function () {
+    const hideForNewUser =
+        settings.hide_from_new_users &&
+        this.currentUser &&
+        this.currentUser.trust_level === 0;
+    const hideForAnon = settings.hide_from_anons && !this.currentUser;
     
-     const items = [
+    const items = [
       {
         id: "new_question",
         name: "Kérdésed van?",
@@ -26,14 +31,14 @@ export default DropdownSelectBoxComponent.extend({
         icon: "question-circle",
       },
     ];
-
-    items.push({
-      id: "new_ad",
-      name: "Eladnál? Esetleg vennél?",
-      description: "Hirdess gyorsan, egyszerűen...",
-      icon: "tags",
-    });
-
+    if (hideForNewUser || hideForAnon) {
+      items.push({
+        id: "new_ad",
+        name: "Eladnál? Esetleg vennél?",
+        description: "Hirdess gyorsan, egyszerűen...",
+        icon: "tags",
+      });
+    }
     return items;
   }),
 
@@ -50,14 +55,8 @@ export default DropdownSelectBoxComponent.extend({
         categoryId: categoryId,
       });
     }
-    
-    const hideForNewUser =
-        settings.hide_from_new_users &&
-        this.currentUser &&
-        this.currentUser.trust_level === 0;
-    const hideForAnon = settings.hide_from_anons && !this.currentUser;
   
-    if (selectedAction === "new_ad" || hideForNewUser || hideForAnon) {
+    if (selectedAction === "new_ad") {
       const composerController = getOwner(this).lookup("controller:composer");
       let categoryId = 1;
       
