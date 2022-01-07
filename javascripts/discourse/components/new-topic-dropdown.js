@@ -48,14 +48,14 @@ export default DropdownSelectBoxComponent.extend({
     composerController1.open({
       action: Composer.CREATE_TOPIC,
       draftKey: Composer.NEW_TOPIC_KEY,
-      categoryId: "16",
+      categoryId: 16,
       tags: tags,
     });
   
     composerController2.open({
       action: Composer.CREATE_TOPIC,
       draftKey: Composer.NEW_TOPIC_KEY,
-      categoryId: "15",
+      categoryId: 15,
       tags: tags,
     });
   },
