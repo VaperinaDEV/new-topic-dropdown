@@ -14,7 +14,7 @@
     background: var(--secondary);
     border-radius: 0 1em 1em 0;
     border: 2px solid var(--tertiary);
-    &:hover.
+    &:hover,
     &:focus {
       background: var(--primary-low);
     }
