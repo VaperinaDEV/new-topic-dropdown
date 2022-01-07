@@ -18,7 +18,6 @@ export default DropdownSelectBoxComponent.extend({
 
   content: computed(function () {
     const hideForNewUser = this.currentUser && this.currentUser.trust_level === 0;
-    const hideForAnon = !this.currentUser;
     
     const items = [
       {
@@ -28,7 +27,7 @@ export default DropdownSelectBoxComponent.extend({
         icon: "question-circle",
       },
     ];
-    if (hideForNewUser || hideForAnon) {
+    if (hideForNewUser) {
       items.push({
         id: "new_ad",
         name: "Eladnál? Esetleg vennél?",
