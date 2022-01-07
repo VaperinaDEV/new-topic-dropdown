@@ -43,7 +43,7 @@ export default DropdownSelectBoxComponent.extend({
   
     if (selectedAction === "new_question") {
       const composerController = getOwner(this).lookup("controller:composer");
-      let categoryId = 16;
+      let categoryId = 49;
       
       composerController.open({
         action: Composer.CREATE_TOPIC,
@@ -54,7 +54,7 @@ export default DropdownSelectBoxComponent.extend({
   
     if (selectedAction === "new_ad") {
       const composerController = getOwner(this).lookup("controller:composer");
-      let categoryId = 1;
+      let categoryId = 31;
       
       composerController.open({
         action: Composer.CREATE_TOPIC,
