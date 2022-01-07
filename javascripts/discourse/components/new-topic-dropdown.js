@@ -39,20 +39,27 @@ export default DropdownSelectBoxComponent.extend({
 
   @action
   onChange(selectedAction) {
-    const composerController = getOwner(this).lookup("controller:composer");
   
-    let categoryId1 = 16;
-    let categoryId2 = 1;
-
-    composerController.open({
-      action: Composer.CREATE_TOPIC,
-      draftKey: Composer.NEW_TOPIC_KEY,
-      categoryId: categoryId1,
-    });
-    composerController.open({
-      action: Composer.CREATE_TOPIC,
-      draftKey: Composer.NEW_TOPIC_KEY,
-      categoryId: categoryId2,
-    });
+    if (selectedAction === "new_question") {
+      const composerController = getOwner(this).lookup("controller:composer");
+      let categoryId = 16;
+      
+      composerController.open({
+        action: Composer.CREATE_TOPIC,
+        draftKey: Composer.NEW_TOPIC_KEY,
+        categoryId: categoryId,
+      });
+    }
+  
+    if (selectedAction === "new_ad") {
+      const composerController = getOwner(this).lookup("controller:composer");
+      let categoryId = 1;
+      
+      composerController.open({
+        action: Composer.CREATE_TOPIC,
+        draftKey: Composer.NEW_TOPIC_KEY,
+        categoryId: categoryId,
+      });
+    }
   },
 });
