@@ -38,7 +38,7 @@ export default DropdownSelectBoxComponent.extend({
   }),
 
   @action
-  on(selectedAction) {
+  selectedAction {
     const composerController = getOwner(this).lookup("controller:composer");
   
     let tags = null;
