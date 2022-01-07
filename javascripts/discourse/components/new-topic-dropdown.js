@@ -39,22 +39,14 @@ export default DropdownSelectBoxComponent.extend({
 
   @action
   onChange(selectedAction) {
-    const composerController1 = getOwner(this).lookup("controller:composer");
-    const composerController2 = getOwner(this).lookup("controller:composer");
+    const composerController = getOwner(this).lookup("controller:composer");
   
-    let categoryId1 = 16;
-    let categoryId2 = 15;
+    let categoryId = 16;
 
-    composerController1.open({
+    composerController.open({
       action: Composer.CREATE_TOPIC,
       draftKey: Composer.NEW_TOPIC_KEY,
-      categoryId: categoryId1,
-    });
-  
-    composerController2.open({
-      action: Composer.CREATE_TOPIC,
-      draftKey: Composer.NEW_TOPIC_KEY,
-      categoryId: categoryId2,
+      categoryId: categoryId,
     });
   },
 });
