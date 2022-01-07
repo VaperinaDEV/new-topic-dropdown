@@ -36,7 +36,7 @@ export default DropdownSelectBoxComponent.extend({
     items.push({
       id: "new_handcheck",
       name: "Handcheck",
-      description: "Csengetett a postás? Na hadd lássuk...",
+      description: "Vapemail? Na hadd lássuk...",
       icon: "camera",
     });
     if (hideForNewUser) {
