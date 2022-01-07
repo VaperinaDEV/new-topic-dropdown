@@ -55,8 +55,8 @@ export default DropdownSelectBoxComponent.extend({
     composerController.open({
       action: Composer.CREATE_TOPIC,
       draftKey: Composer.draft_key || Composer.NEW_TOPIC_KEY,
-      categoryId: controller.get("category.id"),
-      tags: tags,
+      categoryId: categoryId,
+      tags: tags
     });
   },
 });
