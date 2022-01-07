@@ -11,14 +11,15 @@
   &.new-topic-dropdown .btn {
     width: 3.5em;
     height: 3em;
-    background: var(--primary-low);
+    background: var(--secondary);
     border-radius: 0 1em 1em 0;
     border: 2px solid var(--tertiary);
-    &:hover {
+    &:hover.
+    &:focus {
       background: var(--primary-low);
     }
     .d-icon {
-      color: var(--primary-high);
+      color: var(--tertiary);
     }
   }
   &.is-expanded .select-kit-header {
