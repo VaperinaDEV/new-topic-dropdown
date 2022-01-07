@@ -8,7 +8,7 @@ export default DropdownSelectBoxComponent.extend({
   classNames: ["new-topic-dropdown"],
 
   selectKitOptions: {
-    icons: ["th-list"],
+    icons: ["bolt"],
     showFullTitle: false,
     autoFilterable: false,
     filterable: false,
