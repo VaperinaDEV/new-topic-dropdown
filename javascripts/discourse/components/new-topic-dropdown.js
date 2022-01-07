@@ -17,7 +17,7 @@ export default DropdownSelectBoxComponent.extend({
   },
 
   content: computed(function () {
-    const hideForNewUser = this.currentUser && this.currentUser.trust_level = 0;
+    const hideForNewUser = this.currentUser && this.currentUser.trust_level > 0;
     
     const items = [
       {
