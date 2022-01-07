@@ -39,7 +39,6 @@ export default DropdownSelectBoxComponent.extend({
 
   @action
   onChange(selectedAction) {
-  this._super(...arguments);
     const composerController = getOwner(this).lookup("controller:composer");
 
     let tags = null;
@@ -59,5 +58,6 @@ export default DropdownSelectBoxComponent.extend({
       categoryId: categoryId,
       tags: tags,
     });
+  return this._super(...arguments);
   },
 });
