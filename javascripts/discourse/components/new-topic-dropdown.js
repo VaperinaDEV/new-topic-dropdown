@@ -50,8 +50,14 @@ export default DropdownSelectBoxComponent.extend({
         categoryId: categoryId,
       });
     }
+    
+    const hideForNewUser =
+        settings.hide_from_new_users &&
+        this.currentUser &&
+        this.currentUser.trust_level === 0;
+    const hideForAnon = settings.hide_from_anons && !this.currentUser;
   
-    if (selectedAction === "new_ad") {
+    if (selectedAction === "new_ad" || hideForNewUser || hideForAnon) {
       const composerController = getOwner(this).lookup("controller:composer");
       let categoryId = 1;
       
