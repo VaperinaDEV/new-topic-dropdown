@@ -33,6 +33,12 @@ export default DropdownSelectBoxComponent.extend({
       description: "Dobj fel egy érdekes témát...",
       icon: "comment",
     });
+    items.push({
+      id: "new_handcheck",
+      name: "Handcheck",
+      description: "Csengetett a postás? Na hadd lássuk...",
+      icon: "camera",
+    });
     if (hideForNewUser) {
       items.push({
         id: "new_ad",
@@ -41,12 +47,6 @@ export default DropdownSelectBoxComponent.extend({
         icon: "tags",
       });
     }
-    items.push({
-      id: "new_handcheck",
-      name: "Handcheck",
-      description: "Csengetett a postás? Na hadd lássuk...",
-      icon: "camera",
-    });
     return items;
   }),
 
@@ -75,9 +75,9 @@ export default DropdownSelectBoxComponent.extend({
       });
     }
   
-    if (selectedAction === "new_ad") {
+    if (selectedAction === "new_handcheck") {
       const composerController = getOwner(this).lookup("controller:composer");
-      let categoryId = 31;
+      let categoryId = 5;
       
       composerController.open({
         action: Composer.CREATE_TOPIC,
@@ -86,9 +86,9 @@ export default DropdownSelectBoxComponent.extend({
       });
     }
   
-    if (selectedAction === "new_handcheck") {
+    if (selectedAction === "new_ad") {
       const composerController = getOwner(this).lookup("controller:composer");
-      let categoryId = 5;
+      let categoryId = 31;
       
       composerController.open({
         action: Composer.CREATE_TOPIC,
