@@ -36,7 +36,7 @@ export default DropdownSelectBoxComponent.extend({
 
     return items;
   }),
-
+api.modifyClass("model:composer", {
   @action
   onChange(selectedAction) {
     const composerController = getOwner(this).lookup("controller:composer");
@@ -58,6 +58,6 @@ export default DropdownSelectBoxComponent.extend({
       categoryId: categoryId,
       tags: tags,
     });
-  return this._super(...arguments);
   },
 });
+};
