@@ -27,6 +27,12 @@ export default DropdownSelectBoxComponent.extend({
         icon: "question-circle",
       },
     ];
+    items.push({
+      id: "new_comment",
+      name: "Társalgó",
+      description: "Dobj fel egy érdekes témát...",
+      icon: "comment",
+    });
     if (hideForNewUser) {
       items.push({
         id: "new_ad",
@@ -35,6 +41,12 @@ export default DropdownSelectBoxComponent.extend({
         icon: "tags",
       });
     }
+    items.push({
+      id: "new_handcheck",
+      name: "Handcheck",
+      description: "Csengetett a postás? Na hadd lássuk...",
+      icon: "camera",
+    });
     return items;
   }),
 
@@ -52,9 +64,31 @@ export default DropdownSelectBoxComponent.extend({
       });
     }
   
+    if (selectedAction === "new_comment") {
+      const composerController = getOwner(this).lookup("controller:composer");
+      let categoryId = 7;
+      
+      composerController.open({
+        action: Composer.CREATE_TOPIC,
+        draftKey: Composer.NEW_TOPIC_KEY,
+        categoryId: categoryId,
+      });
+    }
+  
     if (selectedAction === "new_ad") {
       const composerController = getOwner(this).lookup("controller:composer");
       let categoryId = 31;
+      
+      composerController.open({
+        action: Composer.CREATE_TOPIC,
+        draftKey: Composer.NEW_TOPIC_KEY,
+        categoryId: categoryId,
+      });
+    }
+  
+    if (selectedAction === "new_handcheck") {
+      const composerController = getOwner(this).lookup("controller:composer");
+      let categoryId = 5;
       
       composerController.open({
         action: Composer.CREATE_TOPIC,
