@@ -1,10 +1,8 @@
 .after-create-topic-button-outlet.new-topic-dropdown {
-  position: absolute;
-  right: 1em;
+  display: flex;
+  justify-content: flex-end;
   margin-top: -3em;
-  body.category-header & {
-    right: 0.5em;
-  }
+  margin-right: 0;
 }
 
 .select-kit {
