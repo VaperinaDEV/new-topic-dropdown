@@ -20,6 +20,9 @@
     }
     .d-icon {
       color: var(--tertiary);
+      &.caret-icon {
+        padding-left: 0;
+      }
     }
   }
   &.is-expanded .select-kit-header {
