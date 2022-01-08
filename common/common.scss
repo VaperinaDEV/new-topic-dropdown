@@ -20,9 +20,6 @@
     }
     .d-icon {
       color: var(--tertiary);
-      &.caret-icon {
-        position: relative !important;
-      }
     }
   }
   &.is-expanded .select-kit-header {
