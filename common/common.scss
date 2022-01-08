@@ -21,7 +21,7 @@
     .d-icon {
       color: var(--tertiary);
       &.caret-icon {
-        position: relative;
+        position: relative !important;
       }
     }
   }
