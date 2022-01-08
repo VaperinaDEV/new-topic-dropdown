@@ -22,6 +22,7 @@
       color: var(--tertiary);
       &.caret-icon {
         padding-left: 0;
+        margin-left: 0 !important;
       }
     }
   }
