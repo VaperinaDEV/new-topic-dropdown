@@ -28,3 +28,15 @@
     box-shadow: none !important;
   }
 }
+
+#create-topic {
+  &.open-draft {
+    + .new-topic-dropdown .btn {
+      border: 2px solid var(--primary-medium);
+      .d-icon {
+        color: var(--primary-medium);
+      }
+    }
+  }
+}
+      
