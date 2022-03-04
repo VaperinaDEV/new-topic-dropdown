@@ -1,6 +1,6 @@
 .after-create-topic-button-outlet.new-topic-dropdown {
   width: 3.5em;
-  margin-top: -40px;
+  margin-top: -3em;
   margin-left: auto;
   margin-right: 0;
 }
@@ -8,17 +8,16 @@
 .select-kit {
   &.new-topic-dropdown .btn {
     width: 3.5em;
-    height: 40px;
+    height: 3em;
     background: var(--secondary);
-    border-radius: 0 2em 2em 0;
-    border: 1px solid var(--primary-high);
+    border-radius: 0 1em 1em 0;
+    border: 2px solid var(--tertiary);
     &:hover,
     &:focus {
       background: var(--primary-low);
-      border: 1px solid var(--primary-high);
     }
     .d-icon {
-      color: var(--primary-high);
+      color: var(--tertiary);
       &.caret-icon {
         padding-left: 0;
         margin-left: 0 !important;
@@ -33,16 +32,10 @@
 #create-topic {
   &.open-draft {
     + .new-topic-dropdown .btn {
-      background: var(--primary-medium);
-      border: 1px solid var(--primary-high);
+      border: 2px solid var(--primary-medium);
       .d-icon {
-        color: var(--secondary);
-      }
-      &:focus,
-      &:hover {
-        background: var(--primary-high);
+        color: var(--primary-medium);
       }
     }
   }
 }
-      
