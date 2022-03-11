@@ -4,9 +4,10 @@
   margin-left: auto;
   margin-right: 0;
   .mobile-view & {
-    position: absolute;
-    right: 1em;
-    margin-top: -125px;
+    order: 2;
+    margin-top: 0em;
+    margin-left: -3.5em;
+    margin-right: 0px;
   }
 }
 
@@ -40,7 +41,7 @@
 
 #create-topic {
   &.open-draft {
-    + .new-topic-dropdown .btn {
+    .new-topic-dropdown .btn {
       border: 2px solid var(--primary-medium);
       .d-icon {
         color: var(--primary-medium);
