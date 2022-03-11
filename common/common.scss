@@ -19,6 +19,7 @@
     border: 2px solid var(--tertiary);
     .mobile-view & {
       height: 40px;
+      border-radius: 0 2em 2em 0;
     }
     &:hover,
     &:focus {
