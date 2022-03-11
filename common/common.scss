@@ -3,6 +3,11 @@
   margin-top: -3em;
   margin-left: auto;
   margin-right: 0;
+  .mobile-view & {
+    position: absolute;
+    right: 1em;
+    margin-top: -124px;
+  }
 }
 
 .select-kit {
@@ -12,6 +17,9 @@
     background: var(--secondary);
     border-radius: 0 1em 1em 0;
     border: 2px solid var(--tertiary);
+    .mobile-view & {
+      height: 40px;
+    }
     &:hover,
     &:focus {
       background: var(--primary-low);
