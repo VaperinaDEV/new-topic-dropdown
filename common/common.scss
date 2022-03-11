@@ -41,7 +41,19 @@
 
 #create-topic {
   &.open-draft {
-    .new-topic-dropdown .btn {
+    + .new-topic-dropdown .btn {
+      border: 2px solid var(--primary-medium);
+      .d-icon {
+        color: var(--primary-medium);
+      }
+    }
+  }
+}
+
+.mobile-view {
+  #create-topic {
+    &.open-draft {
+    + .vp-stats + .new-topic-dropdown .btn {
       border: 2px solid var(--primary-medium);
       .d-icon {
         color: var(--primary-medium);
