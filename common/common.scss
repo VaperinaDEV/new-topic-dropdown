@@ -16,11 +16,10 @@
     width: 3.5em;
     height: 3em;
     background: var(--secondary);
-    border-radius: 0 1em 1em 0;
+    border-radius: 0 2em 2em 0;
     border: 2px solid var(--tertiary);
     .mobile-view & {
       height: 40px;
-      border-radius: 0 2em 2em 0;
     }
     &:hover,
     &:focus {
