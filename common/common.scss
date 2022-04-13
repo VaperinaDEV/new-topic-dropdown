@@ -1,20 +1,17 @@
 .after-create-topic-button-outlet.new-topic-dropdown {
-  width: 3.5em;
-  margin-top: -3em;
-  margin-left: auto;
-  margin-right: 0;
+  text-align: right;
+  margin-top: -48px;
   .mobile-view & {
     order: 2;
-    margin-top: 0em;
+    margin-top: 0;
     margin-left: -3.5em;
-    margin-right: 0px;
+    margin-right: 0;
   }
 }
 
 .select-kit {
   &.new-topic-dropdown .btn {
-    width: 3.5em;
-    height: 3em;
+    height: 48px;
     background: var(--secondary);
     border-radius: 0 2em 2em 0;
     border: 2px solid var(--tertiary);
