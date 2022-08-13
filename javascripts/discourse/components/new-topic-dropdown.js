@@ -47,6 +47,12 @@ export default DropdownSelectBoxComponent.extend({
         icon: "tags",
       });
     }
+    items.push({
+      id: "new_off",
+      name: "OFF-Topik",
+      description: "Nem vape téma? Ide jöhet...",
+      icon: "power-off",
+    });
     return items;
   }),
 
@@ -89,6 +95,17 @@ export default DropdownSelectBoxComponent.extend({
     if (selectedAction === "new_ad") {
       const composerController = getOwner(this).lookup("controller:composer");
       let categoryId = 31;
+      
+      composerController.open({
+        action: Composer.CREATE_TOPIC,
+        draftKey: Composer.NEW_TOPIC_KEY,
+        categoryId: categoryId,
+      });
+    }
+  
+    if (selectedAction === "new_off") {
+      const composerController = getOwner(this).lookup("controller:composer");
+      let categoryId = 58;
       
       composerController.open({
         action: Composer.CREATE_TOPIC,
