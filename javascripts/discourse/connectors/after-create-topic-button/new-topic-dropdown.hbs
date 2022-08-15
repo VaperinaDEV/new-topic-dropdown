@@ -1,6 +1,5 @@
 {{#if currentUser}}
-  {{new-topic-dropdown category=category}}
-  {{#if user.silenced}}
-  <p>Hello</p>
+  {{#if this.canCreateTopic}}
+    {{new-topic-dropdown category=category}}
   {{/if}}
 {{/if}}
