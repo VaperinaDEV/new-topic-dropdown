@@ -1,11 +1,11 @@
 .new-topic-dropdown {
   margin-top: -45px;
   float: right;
+  margin-right: 0 !important;
   .mobile-view & {
     order: 2;
     margin-top: 0;
     margin-left: -3.5em;
-    margin-right: 0;
   }
 }
 
