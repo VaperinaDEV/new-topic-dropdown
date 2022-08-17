@@ -17,9 +17,11 @@
     .mobile-view & {
       height: 40px;
     }
-    &:hover,
-    &:focus {
-      background: var(--primary-low);
+    .desktop-view & {
+      &:hover,
+      &:focus {
+        background: var(--primary-low);
+      }
     }
     .d-icon {
       color: var(--tertiary);
