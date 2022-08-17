@@ -5,7 +5,7 @@
   .mobile-view & {
     order: 2;
     margin-top: 0;
-    margin-left: -3.5em;
+    margin-left: -2.75em;
   }
 }
 
@@ -13,7 +13,6 @@
   &.new-topic-dropdown .btn {
     height: 45px;
     background: var(--secondary);
-    border-radius: 0 2em 2em 0;
     border: 2px solid var(--tertiary);
     .mobile-view & {
       height: 40px;
@@ -24,6 +23,12 @@
     }
     .d-icon {
       color: var(--tertiary);
+      width: 1.5em;
+      height: 1.5em;
+      .mobile-view & {
+        width: 1.25em;
+        height: 1.25em;
+      }
       &.caret-icon {
         padding-left: 0;
         margin-left: 0 !important;
