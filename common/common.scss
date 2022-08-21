@@ -5,35 +5,36 @@
   .mobile-view & {
     order: 2;
     margin-top: 0;
-    margin-left: -2.75em;
   }
 }
 
 .select-kit {
   &.new-topic-dropdown .btn {
-    height: 45px;
-    background: var(--secondary);
-    border: 2px solid var(--tertiary);
-    .mobile-view & {
-      height: 40px;
-    }
     .desktop-view & {
+      height: 45px;
+      background: var(--secondary);
+      border: 2px solid var(--tertiary);
+      .d-icon {
+        color: var(--tertiary);
+        width: 1.5em;
+        height: 1.5em;
+        &.caret-icon {
+          padding-left: 0;
+          margin-left: 0 !important;
+        }
+      }
       &:hover,
       &:focus {
-        background: var(--primary-low);
+        background: var(--primary-low);          
       }
     }
-    .d-icon {
-      color: var(--tertiary);
-      width: 1.5em;
-      height: 1.5em;
-      .mobile-view & {
-        width: 1.25em;
-        height: 1.25em;
-      }
-      &.caret-icon {
-        padding-left: 0;
-        margin-left: 0 !important;
+    .mobile-view & {
+      .d-icon {
+        &.caret-icon {
+          padding-left: 0;
+          margin-left: 0 !important;
+          color: var(--primary-high);
+        }
       }
     }
   }
