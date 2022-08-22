@@ -11,13 +11,13 @@
 .select-kit {
   &.new-topic-dropdown .btn {
     .desktop-view & {
-      height: 45px;
+      padding: 0.654em 0.652em;
       background: var(--secondary);
       border: 2px solid var(--tertiary);
       .d-icon {
         color: var(--tertiary);
-        width: 1.5em;
-        height: 1.5em;
+        width: 1.25em;
+        height: 1.25em;
         &.caret-icon {
           padding-left: 0;
           margin-left: 0 !important;
