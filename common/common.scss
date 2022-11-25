@@ -9,31 +9,33 @@
 }
 
 .select-kit {
-  &.new-topic-dropdown .btn {
-    .desktop-view & {
-      padding: 0.742em;
-      background: var(--secondary);
-      border: 2px solid var(--tertiary);
-      .d-icon {
-        color: var(--tertiary);
-        width: 1.25em;
-        height: 1.25em;
-        &.caret-icon {
-          padding-left: 0;
-          margin-left: 0 !important;
+  &.new-topic-dropdown {
+    .btn {
+      .desktop-view & {
+        padding: 0.742em;
+        background: var(--secondary);
+        border: 2px solid var(--tertiary);
+        .d-icon {
+          color: var(--tertiary);
+          width: 1.25em;
+          height: 1.25em;
+          &.caret-icon {
+            padding-left: 0;
+            margin-left: 0 !important;
+          }
+        }
+        &:hover,
+        &:focus {
+          background: var(--primary-low);          
         }
       }
-      &:hover,
-      &:focus {
-        background: var(--primary-low);          
-      }
-    }
-    .mobile-view & {
-      .d-icon {
-        &.caret-icon {
-          padding-left: 0;
-          margin-left: 0 !important;
-          color: var(--primary-high);
+      .mobile-view & {
+        .d-icon {
+          &.caret-icon {
+            padding-left: 0;
+            margin-left: 0 !important;
+            color: var(--primary-high);
+          }
         }
       }
     }
