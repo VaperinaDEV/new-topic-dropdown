@@ -23,7 +23,15 @@ export default {
             document.body.classList.remove("new-topic-dropdown-expanded");
           }
         
-          this._super();
+          if (!this.selectKit.isExpanded || !this.selectKit.mainElement()) {
+            return;
+          }
+      
+          if (this.selectKit.mainElement().contains(event.target)) {
+            return;
+          }
+      
+          this.selectKit.close(event);
         },
       });
     });
