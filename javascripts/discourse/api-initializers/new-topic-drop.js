@@ -26,14 +26,10 @@ export default {
         },
 
         willDestroyElement() {
-          this._super(...arguments);
-
-          newTopicDropHeader.removeEventListener("click", () => {
-            document.body.classList.add("new-topic-dropdown-expanded");
-          });          
+          this._super(...arguments);         
 
           const newTopicDropExpanded = document.body.classList.contains("new-topic-dropdown-expanded");
-          if (newTopicDropExpanded && this.selectKit.isExpanded) {
+          if (newTopicDropExpanded) {
             document.body.classList.remove("new-topic-dropdown-expanded");
           }
         },        
