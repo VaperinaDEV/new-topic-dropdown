@@ -19,7 +19,7 @@ export default DropdownSelectBoxComponent.extend({
   @discourseComputed("selectKit.isExpanded")
   caretIcon(isExpanded) {
     return isExpanded ? "caret-up" : "caret-down";
-  },
+  }
 
   content: computed(function () {
     const hideForNewUser = this.currentUser && this.currentUser.trust_level > 0;
