@@ -14,10 +14,10 @@ export default {
       api.onPageChange((url, title) => {
         const newTopicDropdown = document.querySelector(".new-topic-dropdown .select-kit-header");
         
-        newTopicDropdown.addEventListener("focusin", () => {
+        newTopicDropdown.addEventListener("focus, click", () => {
           document.body.classList.add("new-topic-dropdown-expanded");
         });
-        newTopicDropdown.addEventListener("focusout", () => {
+        newTopicDropdown.addEventListener("blur, click", () => {
           document.body.classList.remove("new-topic-dropdown-expanded");
         });
       });
