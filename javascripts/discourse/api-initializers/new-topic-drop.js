@@ -21,8 +21,8 @@ export default {
 
           const newTopicDropHeader = document.querySelector(".select-kit.new-topic-dropdown .select-kit-header");
           if (
-              newTopicDropHeader && 
-              !this.selectKit.isExpanded)
+            newTopicDropHeader && 
+            !this.selectKit.isExpanded
           ) {
             newTopicDropHeader.addEventListener("click", () => {
               document.body.classList.add("new-topic-dropdown-expanded");
@@ -31,9 +31,9 @@ export default {
 
           const newTopicDropExpanded = document.body.classList.contains("new-topic-dropdown-expanded");
           if (
-              newTopicDropExpanded && 
-              this.selectKit.isExpanded &&
-              !this.selectKit.mainElement().contains(event.target)
+            newTopicDropExpanded && 
+            this.selectKit.isExpanded &&
+            !this.selectKit.mainElement().contains(event.target)
           ) {
             document.body.classList.remove("new-topic-dropdown-expanded");
           }
