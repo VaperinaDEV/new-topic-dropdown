@@ -20,7 +20,8 @@ export default {
           newTopicDropHeader.addEventListener("click", () => {
             document.body.classList.add("new-topic-dropdown-expanded");
           });
-        } else {
+        }
+        if (isExpanded) {
           newTopicDropHeader.addEventListener("click", () => {
             document.body.classList.remove("new-topic-dropdown-expanded");
           });
