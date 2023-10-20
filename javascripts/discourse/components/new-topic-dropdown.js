@@ -16,7 +16,6 @@ export default DropdownSelectBoxComponent.extend({
   },
   
   content: computed(function () {
-    document.body.classList.toggle("new-topic-dropdown-expanded");
     
     const hideForNewUser = this.currentUser && this.currentUser.trust_level > 0;
     
