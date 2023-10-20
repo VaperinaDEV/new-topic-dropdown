@@ -32,7 +32,7 @@ export default {
           if (
               newTopicDropExpanded && 
               this.selectKit.isExpanded &&
-              !this.selectKit.mainElement()
+              !this.selectKit.mainElement().contains(event.target)
           ) {
             document.body.classList.remove("new-topic-dropdown-expanded");
           }
