@@ -23,7 +23,7 @@ export default {
             document.body.classList.remove("new-topic-dropdown-expanded");
           }
         
-          this._super(...arguments);
+          this._super();
         },
       });
     });
