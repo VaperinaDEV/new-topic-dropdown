@@ -17,11 +17,11 @@ export default {
         @bind
         handleClick(event) {  
           const newTopicDropHeader = document.querySelector(".new-topic-dropdown .select-kit-header");
-          if (!this.selectKit.isExpanded) {
+          if (newTopicDropHeader && !this.selectKit.isExpanded) {
             newTopicDropHeader.addEventListener("click", () => {
               document.body.classList.add("new-topic-dropdown-expanded");
             });
-          } else if (this.selectKit.isExpanded) {
+          } else if (newTopicDropHeader && this.selectKit.isExpanded) {
             newTopicDropHeader.addEventListener("click", () => {
               document.body.classList.remove("new-topic-dropdown-expanded");
             });
