@@ -33,13 +33,13 @@ export default {
           if (this.selectKit.mainElement().contains(event.target)) {
             return;
           }
-      
-          this.selectKit.close(event);
-
+        
           const newTopicDropExpanded = document.body.classList.contains("new-topic-dropdown-expanded");
           if (newTopicDropExpanded && this.selectKit.isExpanded) {
             document.body.classList.remove("new-topic-dropdown-expanded");
-          }        
+          }
+      
+          this.selectKit.close(event);       
         },
       });
     });
