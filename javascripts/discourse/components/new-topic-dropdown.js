@@ -18,7 +18,9 @@ export default DropdownSelectBoxComponent.extend({
 
   content: computed(function () {
     if (this.selectKit.isExpanded) {
-      document.body.classList.toggle("new-topic-dropdown-expandedg");
+      document.body.classList.add("new-topic-dropdown-expanded");
+    } else if (!this.selectKit.isExpanded) {
+      document.body.classList.remove("new-topic-dropdown-expanded");
     }
     
     const hideForNewUser = this.currentUser && this.currentUser.trust_level > 0;
