@@ -16,13 +16,14 @@ export default {
         const newTopicDropHeader = document.querySelector(".select-kit.new-topic-dropdown .select-kit-header");
         const newTopicDropIsExpanded = document.querySelector(".select-kit.new-topic-dropdown.is-expanded");
         newTopicDropHeader.addEventListener("click", () => {
-          document.body.classList.toggle("new-topic-dropdown-expanded");
+          document.body.classList.add("new-topic-dropdown-expanded");
         });
-        if (newTopicDropIsExpanded) {
-          newTopicDropHeader.addEventListener("scroll", () => {
-            document.body.classList.remove("new-topic-dropdown-expanded");
-          });
-        }
+        newTopicDropHeader.addEventListener("focus", () => {
+          document.body.classList.add("new-topic-dropdown-expanded");
+        });
+        newTopicDropHeader.addEventListener("blur", () => {
+          document.body.classList.remove("new-topic-dropdown-expanded");
+        });
       });
     });
   },
