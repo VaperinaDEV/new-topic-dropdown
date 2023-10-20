@@ -14,13 +14,15 @@ export default {
       api.onPageChange((url, title) => {
         const newTopicDrop = document.querySelector(".select-kit.new-topic-dropdown");
         const newTopicDropHeader = document.querySelector(".select-kit.new-topic-dropdown .select-kit-header");
-        
+        const newTopicDropIsExpanded = document.querySelector(".select-kit.new-topic-dropdown.is-expanded");
         newTopicDropHeader.addEventListener("click", () => {
           document.body.classList.toggle("new-topic-dropdown-expanded");
         });
-        !newTopicDropHeader.addEventListener("click", () => {
-          document.body.classList.remove("new-topic-dropdown-expanded");
-        });
+        if (newTopicDropIsExpanded) {
+          newTopicDropHeader.addEventListener("scroll", () => {
+            document.body.classList.remove("new-topic-dropdown-expanded");
+          });
+        }
       });
     });
   },
