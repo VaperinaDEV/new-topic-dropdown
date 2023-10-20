@@ -17,6 +17,8 @@ export default DropdownSelectBoxComponent.extend({
   
   content: computed(function () {
 
+    document.body.classList.add("new-topic-dropdown-expanded");
+
     const hideForNewUser = this.currentUser && this.currentUser.trust_level > 0;
     
     const items = [
