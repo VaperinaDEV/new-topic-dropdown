@@ -16,10 +16,12 @@ export default {
         pluginId: "select-kit-b",
         @bind
         handleClick(event) {  
-          const newTopicDrop = document.querySelector(".new-topic-dropdown");
-          if (newTopicDrop && !this.selectKit.isExpanded) {
-            document.body.classList.add("new-topic-dropdown-expanded");
-          } else if (newTopicDrop && this.selectKit.isExpanded) {
+          const newTopicDropHeader = document.querySelector(".new-topic-dropdown .select-kit-header");
+          if (!this.selectKit.isExpanded) {
+            newTopicDropHeader.addEventListener("click", () => {
+              document.body.classList.add("new-topic-dropdown-expanded");
+            });
+          } else if (this.selectKit.isExpanded) {
             document.body.classList.remove("new-topic-dropdown-expanded");
           }
         
