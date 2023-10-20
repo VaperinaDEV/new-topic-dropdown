@@ -19,7 +19,7 @@ export default DropdownSelectBoxComponent.extend({
   @discourseComputed("selectKit.isExpanded")
   caretIcon(isExpanded) {
     return document.body.classList.toggle("new-topic-dropdown-expandedg");
-  }
+  },
 
   content: computed(function () {
     const hideForNewUser = this.currentUser && this.currentUser.trust_level > 0;
