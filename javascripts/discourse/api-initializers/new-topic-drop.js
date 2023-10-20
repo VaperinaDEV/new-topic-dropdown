@@ -16,18 +16,18 @@ export default {
       api.modifyClass("component:select-kit/select-kit-body", {
         pluginId: "select-kit-expanded",
         
-        didInsertElement() {
-          this._super(...arguments);
-          
-          const newTopicDropHeader = document.querySelector(".select-kit.new-topic-dropdown .select-kit-header");
-
-          newTopicDropHeader.addEventListener("click", () => {
-            document.body.classList.add("new-topic-dropdown-expanded");
-          });
-        },
-        
         @bind
         handleClick(event) {
+
+          const newTopicDropHeader = document.querySelector(".select-kit.new-topic-dropdown .select-kit-header");
+          if (
+              newTopicDropHeader && 
+              !this.selectKit.isExpanded)
+          ) {
+            newTopicDropHeader.addEventListener("click", () => {
+              document.body.classList.add("new-topic-dropdown-expanded");
+            });
+          }
 
           const newTopicDropExpanded = document.body.classList.contains("new-topic-dropdown-expanded");
           if (
