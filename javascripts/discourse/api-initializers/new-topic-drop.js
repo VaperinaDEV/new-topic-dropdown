@@ -16,7 +16,8 @@ export default {
         pluginId: "select-kit-b",
         @bind
         handleClick(event) {
-          if (this.selectKit.isExpanded) {
+          const newTopicDrop = document.querySelector(".new-topic-dropdown");
+          if (newTopicDrop && !this.selectKit.isExpanded) {
             document.body.classList.add("new-topic-dropdown-expanded");
           }
           if (!this.selectKit.isExpanded || !this.selectKit.mainElement()) {
