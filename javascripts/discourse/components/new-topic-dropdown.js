@@ -6,6 +6,7 @@ import { computed } from "@ember/object";
                                 
 export default DropdownSelectBoxComponent.extend({
   classNames: ["new-topic-dropdown"],
+  classNameBindings: ["isExpanded:is-expanded"],
 
   selectKitOptions: {
     showFullTitle: false,
@@ -15,8 +16,23 @@ export default DropdownSelectBoxComponent.extend({
     none: "topic.create",
   },
   
+  isHidden: computed(
+    "selectKit.options.{filterable,allowAny,autoFilterable}",
+    "content.[]",
+    function () {
+      document.body.classList.remove("new-topic-dropdown-expanded");
+      return (
+        !this.selectKit.options.filterable &&
+        !this.selectKit.options.allowAny &&
+        !this.selectKit.options.autoFilterable
+      );
+    }
+  ),
+
+  isExpanded: not("isHidden"),
+  
   content: computed(function () {
-    
+    document.body.classList.add("new-topic-dropdown-expanded");
     const hideForNewUser = this.currentUser && this.currentUser.trust_level > 0;
     
     const items = [
