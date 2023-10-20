@@ -14,7 +14,7 @@ export default {
       api.onPageChange((url, title) => {
         const newTopicDrop = document.querySelector(".new-topic-dropdown");
         const newTopicDropHeader = document.querySelector(".new-topic-dropdown .select-kit-header");
-        const isExpanded = newTopicDrop.classList.contains(".new-topic-dropdown.is-expanded");
+        const isExpanded = newTopicDrop.classList.contains("is-expanded");
         
         if (!isExpanded) {
           newTopicDropHeader.addEventListener("click", () => {
