@@ -15,15 +15,15 @@ export default {
       api.modifyClass("component:select-kit/select-kit-body", {
         pluginId: "select-kit-b",
         @bind
-        handleClick(event) {
-          this._super(...arguments);
-        
+        handleClick(event) {  
           const newTopicDrop = document.querySelector(".new-topic-dropdown");
           if (newTopicDrop && !this.selectKit.isExpanded) {
             document.body.classList.add("new-topic-dropdown-expanded");
           } else if (newTopicDrop && this.selectKit.isExpanded) {
             document.body.classList.remove("new-topic-dropdown-expanded");
           }
+        
+          this._super(...arguments);
         },
       });
     });
