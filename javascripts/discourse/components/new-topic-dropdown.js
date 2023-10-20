@@ -68,6 +68,7 @@ export default DropdownSelectBoxComponent.extend({
         draftKey: Composer.NEW_TOPIC_KEY,
         categoryId: categoryId,
       });
+      document.body.classList.remove("new-topic-dropdown-expanded");      
     }
   
     if (selectedAction === "new_comment") {
@@ -79,6 +80,7 @@ export default DropdownSelectBoxComponent.extend({
         draftKey: Composer.NEW_TOPIC_KEY,
         categoryId: categoryId,
       });
+      document.body.classList.remove("new-topic-dropdown-expanded");
     }
   
     if (selectedAction === "new_handcheck") {
@@ -90,6 +92,7 @@ export default DropdownSelectBoxComponent.extend({
         draftKey: Composer.NEW_TOPIC_KEY,
         categoryId: categoryId,
       });
+      document.body.classList.remove("new-topic-dropdown-expanded");
     }
   
     if (selectedAction === "new_ad") {
@@ -101,6 +104,7 @@ export default DropdownSelectBoxComponent.extend({
         draftKey: Composer.NEW_TOPIC_KEY,
         categoryId: categoryId,
       });
+      document.body.classList.remove("new-topic-dropdown-expanded");
     }
   
     if (selectedAction === "new_off") {
@@ -112,6 +116,7 @@ export default DropdownSelectBoxComponent.extend({
         draftKey: Composer.NEW_TOPIC_KEY,
         categoryId: categoryId,
       });
+      document.body.classList.remove("new-topic-dropdown-expanded");
     }
   },
 });
