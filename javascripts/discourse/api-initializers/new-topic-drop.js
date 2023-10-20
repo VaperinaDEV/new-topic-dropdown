@@ -31,7 +31,7 @@ export default {
           }
 
           const newTopicDropExpanded = document.body.classList.contains("new-topic-dropdown-expanded");
-          if ((newTopicDropExpanded && this.selectKit.isExpanded) && (newTopicDropExpanded && this.selectKit.mainElement())) {
+          if (this.selectKit.isExpanded) {
             document.body.classList.remove("new-topic-dropdown-expanded");
           }        
       
