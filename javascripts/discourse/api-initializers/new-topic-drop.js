@@ -28,12 +28,15 @@ export default {
         
         @bind
         handleClick(event) {
-          schedule("afterRender", () => {
-            const newTopicDropExpanded = document.body.classList.contains("new-topic-dropdown-expanded");
-            if (newTopicDropExpanded && this.selectKit.isExpanded) {
-              document.body.classList.remove("new-topic-dropdown-expanded");
-            }
-          });
+
+          const newTopicDropExpanded = document.body.classList.contains("new-topic-dropdown-expanded");
+          if (
+              newTopicDropExpanded && 
+              this.selectKit.isExpanded &&
+              !this.selectKit.mainElement().contains(event.target)
+          ) {
+            document.body.classList.remove("new-topic-dropdown-expanded");
+          }
         
           if (!this.selectKit.isExpanded || !this.selectKit.mainElement()) {
             return;
@@ -45,6 +48,13 @@ export default {
       
           this.selectKit.close(event);
         },      
+      });
+
+      api.onAppEvent("composer:opened", () => {
+        const newTopicDropExpanded = document.body.classList.contains("new-topic-dropdown-expanded");
+        if (newTopicDropExpanded) {
+          document.body.classList.remove("new-topic-dropdown-expanded");
+        }
       });
     });
   },
