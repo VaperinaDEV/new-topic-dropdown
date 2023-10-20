@@ -27,10 +27,11 @@ export default Component.extend(UtilsMixin, {
   isExpanded: not("isHidden"),
 
   @action
-  click() {
+  onClick() {
     if (this.selectKit.isExpanded) {
       document.body.classList.add("new-topic-dropdown-expandedg");
     } else {
       document.body.classList.remove("new-topic-dropdown-expandedg");
+    }
   }
 });
