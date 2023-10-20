@@ -16,19 +16,14 @@ export default {
         pluginId: "select-kit-b",
         @bind
         handleClick(event) {
+          this._super(...arguments);
+        
           const newTopicDrop = document.querySelector(".new-topic-dropdown");
           if (newTopicDrop && !this.selectKit.isExpanded) {
             document.body.classList.add("new-topic-dropdown-expanded");
+          } else if (newTopicDrop && this.selectKit.isExpanded) {
+            document.body.classList.remove("new-topic-dropdown-expanded");
           }
-          if (!this.selectKit.isExpanded || !this.selectKit.mainElement()) {
-            return;
-          }
-      
-          if (this.selectKit.mainElement().contains(event.target)) {
-            return;
-          }
-      
-          this.selectKit.close(event);
         },
       });
     });
