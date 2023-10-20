@@ -19,7 +19,8 @@ export default DropdownSelectBoxComponent.extend({
   content: computed(function () {
     if (this.selectKit.isExpanded) {
       document.body.classList.add("new-topic-dropdown-expanded");
-    } else {
+    }
+    if (!this.selectKit.isExpanded) {
       document.body.classList.remove("new-topic-dropdown-expanded");
     }
     
