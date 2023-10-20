@@ -18,7 +18,10 @@ export default DropdownSelectBoxComponent.extend({
 
   @discourseComputed("selectKit.isExpanded")
   caretIcon(isExpanded) {
-    return document.body.classList.toggle("new-topic-dropdown-expandedg");
+    return isExpanded ? "caret-up" : "caret-down";
+    if (this.selectKit.isExpanded) {
+      return document.body.classList.add("new-topic-dropdown-expandedg");
+    }
   },
 
   content: computed(function () {
