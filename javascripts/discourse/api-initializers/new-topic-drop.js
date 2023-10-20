@@ -1,5 +1,6 @@
 import { withPluginApi } from "discourse/lib/plugin-api";
 import { bind } from "discourse-common/utils/decorators";
+import { schedule } from "@ember/runloop";
 
 export default {
   name: "new-topic-float",
