@@ -3,9 +3,10 @@ import { getOwner } from "discourse-common/lib/get-owner";
 import Composer from "discourse/models/composer";
 import DropdownSelectBoxComponent from "select-kit/components/dropdown-select-box";
 import { computed } from "@ember/object";
-
+                                
 export default DropdownSelectBoxComponent.extend({
   classNames: ["new-topic-dropdown"],
+  classNameBindings: ["isExpanded:is-expanded"],
 
   selectKitOptions: {
     showFullTitle: false,
@@ -16,6 +17,10 @@ export default DropdownSelectBoxComponent.extend({
   },
 
   content: computed(function () {
+    if (this.selectKit.isExpanded) {
+      document.body.classList.toggle("new-topic-dropdown-expandedg");
+    }
+    
     const hideForNewUser = this.currentUser && this.currentUser.trust_level > 0;
     
     const items = [
