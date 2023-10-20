@@ -28,6 +28,10 @@ export default {
         willDestroyElement() {
           this._super(...arguments);
 
+          newTopicDropHeader.removeEventListener("click", () => {
+            document.body.classList.add("new-topic-dropdown-expanded");
+          });          
+
           const newTopicDropExpanded = document.body.classList.contains("new-topic-dropdown-expanded");
           if (newTopicDropExpanded && this.selectKit.isExpanded) {
             document.body.classList.remove("new-topic-dropdown-expanded");
