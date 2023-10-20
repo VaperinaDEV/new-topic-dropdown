@@ -22,9 +22,10 @@ export default {
               document.body.classList.add("new-topic-dropdown-expanded");
             });
           } else if (this.selectKit.isExpanded) {
-            newTopicDropHeader.removeEventListener("click", () => {
+            newTopicDropHeader.addEventListener("click", () => {
               document.body.classList.remove("new-topic-dropdown-expanded");
             });
+            document.body.classList.remove("new-topic-dropdown-expanded");
           }
         
           if (!this.selectKit.isExpanded || !this.selectKit.mainElement()) {
