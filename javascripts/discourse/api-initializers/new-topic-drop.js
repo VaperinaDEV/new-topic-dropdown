@@ -14,14 +14,11 @@ export default {
 
       api.modifyClass("component:select-kit/select-kit-body", {
         pluginId: "select-kit-expanded",
+        
         @bind
         handleClick(event) {  
-          const newTopicDropHeader = document.querySelector(".select-kit.single-select.dropdown-select-box.new-topic-dropdown .select-kit-header");
-          if (newTopicDropHeader && !this.selectKit.isExpanded) {
-            newTopicDropHeader.addEventListener("click", () => {
-              document.body.classList.add("new-topic-dropdown-expanded");
-            });
-          } else if (newTopicDropHeader && this.selectKit.isExpanded) {
+          const newTopicDropExpanded = document.body.classList.contains("new-topic-dropdown-expanded");
+          if (newTopicDropExpanded && this.selectKit.isExpanded) {
             document.body.classList.remove("new-topic-dropdown-expanded");
           }
         
