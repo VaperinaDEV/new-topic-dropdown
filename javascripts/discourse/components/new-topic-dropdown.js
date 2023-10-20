@@ -2,7 +2,6 @@ import { action } from "@ember/object";
 import { getOwner } from "discourse-common/lib/get-owner";
 import Composer from "discourse/models/composer";
 import DropdownSelectBoxComponent from "select-kit/components/dropdown-select-box";
-import discourseComputed from "discourse-common/utils/decorators";
 import { computed } from "@ember/object";
 
 export default DropdownSelectBoxComponent.extend({
@@ -14,14 +13,6 @@ export default DropdownSelectBoxComponent.extend({
     filterable: false,
     showCaret: true,
     none: "topic.create",
-  },
-
-  @discourseComputed("selectKit.isExpanded")
-  caretIcon(isExpanded) {
-    return isExpanded ? "caret-up" : "caret-down";
-    if (this.selectKit.isExpanded) {
-      return document.body.classList.add("new-topic-dropdown-expandedg");
-    }
   },
 
   content: computed(function () {
