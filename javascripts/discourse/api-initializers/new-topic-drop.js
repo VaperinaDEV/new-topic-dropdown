@@ -24,15 +24,29 @@ export default {
             document.body.classList.add("new-topic-dropdown-expanded");
           });
         },
-
-        willDestroyElement() {
-          this._super(...arguments);         
-
+        
+        @bind
+        handleClick(event) {
+        
           const newTopicDropExpanded = document.body.classList.contains("new-topic-dropdown-expanded");
-          if (newTopicDropExpanded) {
+          if (
+              newTopicDropExpanded && 
+              this.selectKit.isExpanded &&
+              !this.selectKit.mainElement()
+          ) {
             document.body.classList.remove("new-topic-dropdown-expanded");
           }
-        },        
+        
+          if (!this.selectKit.isExpanded || !this.selectKit.mainElement()) {
+            return;
+          }
+      
+          if (this.selectKit.mainElement().contains(event.target)) {
+            return;
+          }
+      
+          this.selectKit.close(event);
+        },      
       });
     });
   },
