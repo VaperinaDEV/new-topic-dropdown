@@ -14,9 +14,9 @@ export default DropdownSelectBoxComponent.extend({
     showCaret: true,
     none: "topic.create",
   },
-
+  
   content: computed(function () {
-    document.body.classList.add("new-topic-dropdown-expanded");
+    document.body.classList.toggle("new-topic-dropdown-expanded");
     
     const hideForNewUser = this.currentUser && this.currentUser.trust_level > 0;
     
